@@ -31,7 +31,7 @@ jobs:
         set -x
         ./mvnw -B versions:set -DnewVersion=${{ github.event.inputs.release_version }}
         ./mvnw -B versions:commit
-        ./mvnw -B -U clean deploy -Psign
+        ./mvnw -B -U clean deploy -Psign,release-build
       env:
         OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
         OSSRH_TOKEN: ${{ secrets.OSSRH_TOKEN }}
