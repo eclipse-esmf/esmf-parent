@@ -1,0 +1,79 @@
+name: Release Artifact
+on:
+  workflow_dispatch:
+    inputs:
+      release_version:
+        description: 'Version number of the release'
+        required: true
+jobs:
+  build-and-release:
+    runs-on: ubuntu-20.04
+    name: "Build and release"
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+        server-id: ossrh
+        server-username: OSSRH_USERNAME
+        server-password: OSSRH_TOKEN
+        gpg-private-key: ${{ secrets.PGP_KEY }}
+        gpg-passphrase: PGP_KEY_PASSWORD
+        overwrite-settings: true
+
+    - name: Build artifact and release to OSSRH
+      run: |
+        set -x
+        ./mvnw -B versions:set -DnewVersion=${{ github.event.inputs.release_version }}
+        ./mvnw -B versions:commit
+        ./mvnw -B -U clean deploy -Psign
+      env:
+        OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+        OSSRH_TOKEN: ${{ secrets.OSSRH_TOKEN }}
+        PGP_KEY_PASSWORD: ${{ secrets.PGP_KEY_PASSWORD }}
+
+    # If the deployment to OSSRH went through, the following steps will
+    # - Commit updated version to release branch
+    # - Create Github release
+
+    - name: Commit version changes and push to upstream repository
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+         branch: main
+         commit_user_name: github-actions
+         commit_user_email: github-actions@github.com
+         commit_author: Actions <actions@github.com>
+         commit_message: "Set to version ${{ github.event.inputs.release_version }}"
+         file_pattern: 'pom.xml'
+
+    - name: Create GitHub release
+      uses: softprops/action-gh-release@v1
+      with:
+        body: "Create Github release"
+        tag_name: v${{ github.event.inputs.release_version }}
+        target_commitish: main
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN  }}
+
+    - name: Reset version to DEV-SNAPSHOT
+      run: |
+        set -x
+        ./mvnw -B versions:set -DnewVersion=DEV-SNAPSHOT
+        ./mvnw -B versions:commit
+
+    - name: Commit version changes and push to upstream repository
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+         branch: main
+         commit_user_name: github-actions
+         commit_user_email: github-actions@github.com
+         commit_author: Actions <actions@github.com>
+         commit_message: "Set version to DEV-SNAPSHOT"
+         file_pattern: 'pom.xml'
