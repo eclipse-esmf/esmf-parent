@@ -26,4 +26,7 @@ jobs:
     - name: Build
       run: |
         ./mvnw -B clean verify
+        echo "```" >> $GITHUB_STEP_SUMMARY
+        ./mvnw -B versions:display-property-updates | sed -n '/updates are available/, /\[INFO\]\s*$/p' | sed -e 's/\[INFO\] //g' >> $GITHUB_STEP_SUMMARY
+        echo "```" >> $GITHUB_STEP_SUMMARY
 
