@@ -46,34 +46,45 @@
 
    <properties>
       <aspect-meta-model-version>2.0.0</aspect-meta-model-version>
+      <assertj-core-version>3.24.2</assertj-core-version>
       <assertj-vavr-version>0.4.2</assertj-vavr-version>
       <batik-version>1.16</batik-version>
       <classgraph-version>4.8.157</classgraph-version>
+      <commons-codec-version>1.15</commons-codec-version>
       <commons-text-version>1.10.0</commons-text-version>
       <easy-random-version>5.0.0</easy-random-version>
       <graalvm-version>22.3.1</graalvm-version>
       <graphviz-version>0.18.1</graphviz-version>
       <guava-version>31.1-jre</guava-version>
       <guice-version>5.1.0</guice-version>
+      <hibernate-validator-version>8.0.0.Final</hibernate-validator-version>
       <io-admin-shell-aas-model>1.2.0</io-admin-shell-aas-model>
       <io-admin-shell-aas-serializer>1.2.1</io-admin-shell-aas-serializer>
+      <jackson-version>2.14.1</jackson-version>
+      <jackson-databind-version>2.14.1</jackson-databind-version>
+      <jakarta-el-version>4.0.2</jakarta-el-version>
       <jansi-version>1.18</jansi-version>
       <javaparser-version>3.25.2</javaparser-version>
       <jena-version>4.7.0</jena-version>
       <jqwik-version>1.7.3</jqwik-version>
       <json-path-version>2.8.0</json-path-version>
       <json-schema-validator-version>2.2.14</json-schema-validator-version>
+      <junit-jupiter-version>5.9.2</junit-jupiter-version>
+      <logback-version>1.2.11</logback-version>
       <lombok-version>1.18.24</lombok-version>
       <maven-plugin-annotations-version>3.8.1</maven-plugin-annotations-version>
       <maven-plugin-dependencies-version>3.3.9</maven-plugin-dependencies-version>
       <picocli-version>4.7.1</picocli-version>
+      <poi-version>5.2.3</poi-version>
       <record-builder-version>36</record-builder-version>
       <rgxgen-version>1.4</rgxgen-version>
       <rhino-version>1.7.14</rhino-version>
       <roaster-version>2.28.0.Final</roaster-version>
+      <slf4j-api-version>1.7.36</slf4j-api-version>
       <spring-boot-version>3.0.5</spring-boot-version>
       <swagger-parser-version>2.1.13</swagger-parser-version>
       <tika-version>2.7.0</tika-version>
+      <validation-api-version>2.0.1.Final</validation-api-version>
       <vavr-version>0.10.4</vavr-version>
       <velocity-version>2.3</velocity-version>
       <viz-js-graphviz-java-version>2.1.3</viz-js-graphviz-java-version>
@@ -124,6 +135,11 @@
          </dependency>
          <dependency>
             <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj-core-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.assertj</groupId>
             <artifactId>assertj-vavr</artifactId>
             <version>${assertj-vavr-version}</version>
          </dependency>
@@ -144,6 +160,11 @@
             <version>${classgraph-version}</version>
          </dependency>
          <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${commons-codec-version}</version>
+         </dependency>
+         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-text</artifactId>
             <version>${commons-text-version}</version>
@@ -157,6 +178,11 @@
             <groupId>org.graalvm.sdk</groupId>
             <artifactId>graal-sdk</artifactId>
             <version>${graalvm-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate-validator-version}</version>
          </dependency>
          <dependency>
             <groupId>org.graalvm.js</groupId>
@@ -178,6 +204,16 @@
             <groupId>guru.nidi</groupId>
             <artifactId>graphviz-java-min-deps</artifactId>
             <version>${graphviz-version}</version>
+            <exclusions>
+               <exclusion>
+                  <groupId>org.slf4j</groupId>
+                  <artifactId>jcl-over-slf4j</artifactId>
+               </exclusion>
+               <exclusion>
+                  <groupId>org.slf4j</groupId>
+                  <artifactId>jul-to-slf4j</artifactId>
+               </exclusion>
+            </exclusions>
          </dependency>
          <dependency>
             <groupId>org.webjars.npm</groupId>
@@ -222,6 +258,21 @@
             </exclusions>
          </dependency>
          <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson-databind-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>jakarta.el</artifactId>
+            <version>${jakarta-el-version}</version>
+         </dependency>
+         <dependency>
             <groupId>org.fusesource.jansi</groupId>
             <artifactId>jansi</artifactId>
             <version>${jansi-version}</version>
@@ -235,6 +286,12 @@
             <groupId>org.apache.jena</groupId>
             <artifactId>jena-arq</artifactId>
             <version>${jena-version}</version>
+            <exclusions>
+               <exclusion>
+                  <groupId>org.slf4j</groupId>
+                  <artifactId>jcl-over-slf4j</artifactId>
+               </exclusion>
+            </exclusions>
          </dependency>
          <dependency>
             <groupId>org.apache.jena</groupId>
@@ -257,28 +314,39 @@
             <version>${json-schema-validator-version}</version>
          </dependency>
          <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit-jupiter-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>${logback-version}</version>
+         </dependency>
+         <dependency>
             <groupId>org.apache.maven.plugin-tools</groupId>
             <artifactId>maven-plugin-annotations</artifactId>
             <version>${maven-plugin-annotations-version}</version>
-            <scope>provided</scope>
          </dependency>
          <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-core</artifactId>
             <version>${maven-plugin-dependencies-version}</version>
-            <scope>provided</scope>
          </dependency>
          <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-plugin-api</artifactId>
             <version>${maven-plugin-dependencies-version}</version>
-            <scope>provided</scope>
          </dependency>
          <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-compat</artifactId>
             <version>${maven-plugin-dependencies-version}</version>
-            <scope>provided</scope>
          </dependency>
          <dependency>
             <groupId>org.apache.maven.plugin-testing</groupId>
@@ -289,6 +357,11 @@
             <groupId>info.picocli</groupId>
             <artifactId>picocli</artifactId>
             <version>${picocli-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>${poi-version}</version>
          </dependency>
          <dependency>
             <groupId>io.soabase.record-builder</groupId>
@@ -316,11 +389,14 @@
             <version>${roaster-version}</version>
          </dependency>
          <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j-api-version}</version>
+         </dependency>
+         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-dependencies</artifactId>
             <version>${spring-boot-version}</version>
-            <type>pom</type>
-            <scope>import</scope>
          </dependency>
          <dependency>
             <groupId>io.swagger.parser.v3</groupId>
@@ -331,6 +407,11 @@
             <groupId>org.apache.tika</groupId>
             <artifactId>tika-core</artifactId>
             <version>${tika-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>${validation-api-version}</version>
          </dependency>
          <dependency>
             <groupId>io.vavr</groupId>
