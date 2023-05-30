@@ -60,6 +60,7 @@
       <hibernate-validator-version>8.0.0.Final</hibernate-validator-version>
       <io-admin-shell-aas-model>1.2.0</io-admin-shell-aas-model>
       <io-admin-shell-aas-serializer>1.2.1</io-admin-shell-aas-serializer>
+      <aas4j-version>1.0.0-milestone-03.1</aas4j-version>
       <jackson-version>2.14.1</jackson-version>
       <jackson-databind-version>2.14.1</jackson-databind-version>
       <jakarta-el-version>4.0.2</jakarta-el-version>
@@ -231,14 +232,14 @@
             <version>${guice-version}</version>
          </dependency>
          <dependency>
-            <groupId>io.admin-shell.aas</groupId>
+            <groupId>org.eclipse.digitaltwin.aas4j</groupId>
             <artifactId>model</artifactId>
-            <version>${io-admin-shell-aas-model}</version>
+            <version>${aas4j-version}</version>
          </dependency>
          <dependency>
-            <groupId>io.admin-shell.aas</groupId>
+            <groupId>org.eclipse.digitaltwin.aas4j</groupId>
             <artifactId>dataformat-xml</artifactId>
-            <version>${io-admin-shell-aas-serializer}</version>
+            <version>${aas4j-version}</version>
             <exclusions>
                <exclusion>
                   <groupId>org.slf4j</groupId>
@@ -247,9 +248,9 @@
             </exclusions>
          </dependency>
          <dependency>
-            <groupId>io.admin-shell.aas</groupId>
+            <groupId>org.eclipse.digitaltwin.aas4j</groupId>
             <artifactId>dataformat-aasx</artifactId>
-            <version>${io-admin-shell-aas-serializer}</version>
+            <version>${aas4j-version}</version>
             <exclusions>
                <exclusion>
                   <groupId>org.slf4j</groupId>
