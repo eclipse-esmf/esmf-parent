@@ -122,6 +122,7 @@
       <nexus-staging-maven-plugin-version>1.6.13</nexus-staging-maven-plugin-version>
 
       <!-- General settings -->
+      <testreports.surefire>surefire-report</testreports.surefire>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
       <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
       <java-target-version>17</java-target-version>
