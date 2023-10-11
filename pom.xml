@@ -55,7 +55,7 @@
       <easy-random-version>5.0.0</easy-random-version>
       <graalvm-version>22.3.1</graalvm-version>
       <graphviz-version>0.18.1</graphviz-version>
-      <guava-version>31.1-jre</guava-version>
+      <guava-version>32.0.0-jre</guava-version>
       <guice-version>5.1.0</guice-version>
       <hibernate-validator-version>8.0.0.Final</hibernate-validator-version>
       <io-admin-shell-aas-model>1.2.0</io-admin-shell-aas-model>
