@@ -45,46 +45,46 @@
    </scm>
 
    <properties>
-      <aspect-meta-model-version>2.0.0</aspect-meta-model-version>
+      <aspect-meta-model-version>2.1.0</aspect-meta-model-version>
       <assertj-core-version>3.24.2</assertj-core-version>
-      <assertj-vavr-version>0.4.2</assertj-vavr-version>
-      <batik-version>1.16</batik-version>
-      <classgraph-version>4.8.157</classgraph-version>
-      <commons-codec-version>1.15</commons-codec-version>
+      <assertj-vavr-version>0.4.3</assertj-vavr-version>
+      <batik-version>1.17</batik-version>
+      <classgraph-version>4.8.162</classgraph-version>
+      <commons-codec-version>1.16.0</commons-codec-version>
       <commons-text-version>1.10.0</commons-text-version>
       <easy-random-version>5.0.0</easy-random-version>
-      <graalvm-version>22.3.1</graalvm-version>
+      <graalvm-version>23.0.1</graalvm-version>
       <graphviz-version>0.18.1</graphviz-version>
-      <guava-version>31.1-jre</guava-version>
-      <guice-version>5.1.0</guice-version>
-      <hibernate-validator-version>8.0.0.Final</hibernate-validator-version>
+      <guava-version>32.1.2-jre</guava-version>
+      <guice-version>7.0.0</guice-version>
+      <hibernate-validator-version>8.0.1.Final</hibernate-validator-version>
       <io-admin-shell-aas-model>1.2.0</io-admin-shell-aas-model>
       <io-admin-shell-aas-serializer>1.2.1</io-admin-shell-aas-serializer>
       <aas4j-version>1.0.0-milestone-03.1</aas4j-version>
-      <jackson-version>2.14.1</jackson-version>
-      <jackson-databind-version>2.14.1</jackson-databind-version>
-      <jakarta-el-version>4.0.2</jakarta-el-version>
-      <jansi-version>1.18</jansi-version>
-      <javaparser-version>3.25.2</javaparser-version>
-      <jena-version>4.7.0</jena-version>
-      <jqwik-version>1.7.3</jqwik-version>
+      <jackson-version>2.15.2</jackson-version>
+      <jackson-databind-version>2.15.2</jackson-databind-version>
+      <jakarta-el-version>5.0.0-M1</jakarta-el-version>
+      <jansi-version>2.4.0</jansi-version>
+      <javaparser-version>3.25.5</javaparser-version>
+      <jena-version>4.9.0</jena-version>
+      <jqwik-version>1.8.0</jqwik-version>
       <json-path-version>2.8.0</json-path-version>
       <json-schema-validator-version>2.2.14</json-schema-validator-version>
-      <junit-jupiter-version>5.9.2</junit-jupiter-version>
-      <logback-version>1.2.11</logback-version>
+      <junit-jupiter-version>5.10.0</junit-jupiter-version>
+      <logback-version>1.4.11</logback-version>
       <lombok-version>1.18.24</lombok-version>
-      <maven-plugin-annotations-version>3.8.1</maven-plugin-annotations-version>
-      <maven-plugin-dependencies-version>3.3.9</maven-plugin-dependencies-version>
-      <picocli-version>4.7.1</picocli-version>
-      <poi-version>5.2.3</poi-version>
-      <record-builder-version>36</record-builder-version>
+      <maven-plugin-annotations-version>3.9.0</maven-plugin-annotations-version>
+      <maven-plugin-dependencies-version>3.9.5</maven-plugin-dependencies-version>
+      <picocli-version>4.7.5</picocli-version>
+      <poi-version>5.2.4</poi-version>
+      <record-builder-version>37</record-builder-version>
       <rgxgen-version>1.4</rgxgen-version>
       <rhino-version>1.7.14</rhino-version>
-      <roaster-version>2.28.0.Final</roaster-version>
-      <slf4j-api-version>1.7.36</slf4j-api-version>
-      <spring-boot-version>3.0.5</spring-boot-version>
-      <swagger-parser-version>2.1.13</swagger-parser-version>
-      <tika-version>2.7.0</tika-version>
+      <roaster-version>2.29.0.Final</roaster-version>
+      <slf4j-api-version>2.0.9</slf4j-api-version>
+      <spring-boot-version>3.1.4</spring-boot-version>
+      <swagger-parser-version>2.1.16</swagger-parser-version>
+      <tika-version>2.9.0</tika-version>
       <validation-api-version>2.0.1.Final</validation-api-version>
       <vavr-version>0.10.4</vavr-version>
       <velocity-version>2.3</velocity-version>
