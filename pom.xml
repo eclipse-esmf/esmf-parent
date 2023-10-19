@@ -424,6 +424,11 @@
             <version>${tika-version}</version>
          </dependency>
          <dependency>
+            <groupId>org.graalvm.truffle</groupId>
+            <artifactId>truffle-api</artifactId>
+            <version>${graalvm-version}</version>
+         </dependency>
+         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
             <version>${validation-api-version}</version>
