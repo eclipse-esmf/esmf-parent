@@ -54,7 +54,7 @@
       <commons-text-version>1.10.0</commons-text-version>
       <easy-random-version>5.0.0</easy-random-version>
       <graalvm-version>23.0.1</graalvm-version>
-      <graphviz-version>0.18.1</graphviz-version>
+      <graph-support-version>1.1.5</graph-support-version>
       <guava-version>32.1.2-jre</guava-version>
       <guice-version>7.0.0</guice-version>
       <hibernate-validator-version>8.0.1.Final</hibernate-validator-version>
@@ -74,7 +74,8 @@
       <logback-version>1.4.11</logback-version>
       <lombok-version>1.18.24</lombok-version>
       <maven-plugin-annotations-version>3.9.0</maven-plugin-annotations-version>
-      <maven-plugin-dependencies-version>3.9.5</maven-plugin-dependencies-version>
+      <!-- Can't update to 3.9.5: sisu-inject usage in maven-plugin-testing-hardness is broken -->
+      <maven-plugin-dependencies-version>3.8.1</maven-plugin-dependencies-version>
       <picocli-version>4.7.5</picocli-version>
       <poi-version>5.2.4</poi-version>
       <record-builder-version>37</record-builder-version>
@@ -88,7 +89,6 @@
       <validation-api-version>3.0.2</validation-api-version>
       <vavr-version>0.10.4</vavr-version>
       <velocity-version>2.3</velocity-version>
-      <viz-js-graphviz-java-version>2.1.3</viz-js-graphviz-java-version>
 
       <!-- Versions of plugins -->
       <build-helper-maven-plugin-version>3.3.0</build-helper-maven-plugin-version>
@@ -204,24 +204,9 @@
             <version>${graalvm-version}</version>
          </dependency>
          <dependency>
-            <groupId>guru.nidi</groupId>
-            <artifactId>graphviz-java-min-deps</artifactId>
-            <version>${graphviz-version}</version>
-            <exclusions>
-               <exclusion>
-                  <groupId>org.slf4j</groupId>
-                  <artifactId>jcl-over-slf4j</artifactId>
-               </exclusion>
-               <exclusion>
-                  <groupId>org.slf4j</groupId>
-                  <artifactId>jul-to-slf4j</artifactId>
-               </exclusion>
-            </exclusions>
-         </dependency>
-         <dependency>
-            <groupId>org.webjars.npm</groupId>
-            <artifactId>viz.js-graphviz-java</artifactId>
-            <version>${viz-js-graphviz-java-version}</version>
+            <groupId>org.graphper</groupId>
+            <artifactId>graph-support</artifactId>
+            <version>${graph-support-version}</version>
          </dependency>
          <dependency>
             <groupId>com.google.guava</groupId>
@@ -421,6 +406,11 @@
             <groupId>org.apache.tika</groupId>
             <artifactId>tika-core</artifactId>
             <version>${tika-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.graalvm.truffle</groupId>
+            <artifactId>truffle-api</artifactId>
+            <version>${graalvm-version}</version>
          </dependency>
          <dependency>
             <groupId>jakarta.validation</groupId>
