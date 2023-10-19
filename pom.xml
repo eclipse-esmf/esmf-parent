@@ -74,7 +74,8 @@
       <logback-version>1.4.11</logback-version>
       <lombok-version>1.18.24</lombok-version>
       <maven-plugin-annotations-version>3.9.0</maven-plugin-annotations-version>
-      <maven-plugin-dependencies-version>3.9.5</maven-plugin-dependencies-version>
+      <!-- Can't update to 3.9.5: sisu-inject usage in maven-plugin-testing-hardness is broken -->
+      <maven-plugin-dependencies-version>3.8.1</maven-plugin-dependencies-version>
       <picocli-version>4.7.5</picocli-version>
       <poi-version>5.2.4</poi-version>
       <record-builder-version>37</record-builder-version>
