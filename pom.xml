@@ -54,7 +54,7 @@
       <commons-text-version>1.10.0</commons-text-version>
       <easy-random-version>5.0.0</easy-random-version>
       <graalvm-version>23.0.1</graalvm-version>
-      <graphviz-version>0.18.1</graphviz-version>
+      <graph-support-version>1.1.5</graph-support-version>
       <guava-version>32.1.2-jre</guava-version>
       <guice-version>7.0.0</guice-version>
       <hibernate-validator-version>8.0.1.Final</hibernate-validator-version>
@@ -89,7 +89,6 @@
       <validation-api-version>2.0.1.Final</validation-api-version>
       <vavr-version>0.10.4</vavr-version>
       <velocity-version>2.3</velocity-version>
-      <viz-js-graphviz-java-version>2.1.3</viz-js-graphviz-java-version>
 
       <!-- Versions of plugins -->
       <build-helper-maven-plugin-version>3.3.0</build-helper-maven-plugin-version>
@@ -205,24 +204,9 @@
             <version>${graalvm-version}</version>
          </dependency>
          <dependency>
-            <groupId>guru.nidi</groupId>
-            <artifactId>graphviz-java-min-deps</artifactId>
-            <version>${graphviz-version}</version>
-            <exclusions>
-               <exclusion>
-                  <groupId>org.slf4j</groupId>
-                  <artifactId>jcl-over-slf4j</artifactId>
-               </exclusion>
-               <exclusion>
-                  <groupId>org.slf4j</groupId>
-                  <artifactId>jul-to-slf4j</artifactId>
-               </exclusion>
-            </exclusions>
-         </dependency>
-         <dependency>
-            <groupId>org.webjars.npm</groupId>
-            <artifactId>viz.js-graphviz-java</artifactId>
-            <version>${viz-js-graphviz-java-version}</version>
+            <groupId>org.graphper</groupId>
+            <artifactId>graph-support</artifactId>
+            <version>${graph-support-version}</version>
          </dependency>
          <dependency>
             <groupId>com.google.guava</groupId>
