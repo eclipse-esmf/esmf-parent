@@ -51,6 +51,7 @@
       <batik-version>1.17</batik-version>
       <classgraph-version>4.8.162</classgraph-version>
       <commons-codec-version>1.16.0</commons-codec-version>
+      <commons-io-version>2.13.0</commons-io-version>
       <commons-text-version>1.10.0</commons-text-version>
       <easy-random-version>5.0.0</easy-random-version>
       <graalvm-version>23.0.1</graalvm-version>
@@ -89,6 +90,7 @@
       <validation-api-version>3.0.2</validation-api-version>
       <vavr-version>0.10.4</vavr-version>
       <velocity-version>2.3</velocity-version>
+       <classworlds-version>1.1</classworlds-version>
 
       <!-- Versions of plugins -->
       <build-helper-maven-plugin-version>3.3.0</build-helper-maven-plugin-version>
@@ -120,6 +122,11 @@
       <maven-surefire-report-plugin-version>3.0.0</maven-surefire-report-plugin-version>
       <native-maven-plugin-version>0.9.20</native-maven-plugin-version>
       <nexus-staging-maven-plugin-version>1.6.13</nexus-staging-maven-plugin-version>
+      <cyclonedx-maven-plugin-version>2.7.10</cyclonedx-maven-plugin-version>
+      <maven-antrun-plugin-version>3.0.0</maven-antrun-plugin-version>
+      <port-allocator-version>1.2</port-allocator-version>
+      <frontend-maven-plugin-version>1.12.1</frontend-maven-plugin-version>
+      <process-exec-version>0.9</process-exec-version>
 
       <!-- General settings -->
       <testreports.surefire>surefire-report</testreports.surefire>
@@ -161,6 +168,11 @@
             <groupId>io.github.classgraph</groupId>
             <artifactId>classgraph</artifactId>
             <version>${classgraph-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io-version}</version>
          </dependency>
          <dependency>
             <groupId>commons-codec</groupId>
@@ -318,6 +330,11 @@
             <version>${junit-jupiter-version}</version>
          </dependency>
          <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit-jupiter-version}</version>
+         </dependency>
+         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>${logback-version}</version>
@@ -326,6 +343,12 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
             <version>${logback-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok-version}</version>
+            <scope>provided</scope>
          </dependency>
          <dependency>
             <groupId>org.apache.maven.plugin-tools</groupId>
@@ -398,6 +421,34 @@
             <version>${spring-boot-version}</version>
          </dependency>
          <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-properties-migrator</artifactId>
+            <version>${spring-boot-version}</version>
+            <scope>runtime</scope>
+         </dependency>
+         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring-boot-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+            <version>${spring-boot-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring-boot-version}</version>
+            <scope>test</scope>
+         </dependency>
+         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-test</artifactId>
+            <version>${spring-boot-version}</version>
+            <scope>test</scope>
+         </dependency>
+         <dependency>
             <groupId>io.swagger.parser.v3</groupId>
             <artifactId>swagger-parser</artifactId>
             <version>${swagger-parser-version}</version>
@@ -427,6 +478,11 @@
             <artifactId>velocity-engine-core</artifactId>
             <version>${velocity-version}</version>
          </dependency>
+          <dependency>
+              <groupId>classworlds</groupId>
+              <artifactId>classworlds</artifactId>
+              <version>${classworlds-version}</version>
+          </dependency>
       </dependencies>
    </dependencyManagement>
 
@@ -568,6 +624,36 @@
                <artifactId>nexus-staging-maven-plugin</artifactId>
                <version>${nexus-staging-maven-plugin-version}</version>
             </plugin>
+            <plugin>
+               <groupId>org.cyclonedx</groupId>
+               <artifactId>cyclonedx-maven-plugin</artifactId>
+               <version>${cyclonedx-maven-plugin-version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>${maven-antrun-plugin-version}</version>
+            </plugin>
+             <plugin>
+                 <groupId>org.sonatype.plugins</groupId>
+                 <artifactId>port-allocator-maven-plugin</artifactId>
+                 <version>${port-allocator-version}</version>
+             </plugin>
+             <plugin>
+                 <groupId>com.github.eirslett</groupId>
+                 <artifactId>frontend-maven-plugin</artifactId>
+                 <version>${frontend-maven-plugin-version}</version>
+             </plugin>
+             <plugin>
+                 <groupId>org.springframework.boot</groupId>
+                 <artifactId>spring-boot-maven-plugin</artifactId>
+                 <version>${spring-boot-version}</version>
+             </plugin>
+             <plugin>
+                 <groupId>com.bazaarvoice.maven.plugins</groupId>
+                 <artifactId>process-exec-maven-plugin</artifactId>
+                 <version>${process-exec-version}</version>
+             </plugin>
          </plugins>
       </pluginManagement>
 
