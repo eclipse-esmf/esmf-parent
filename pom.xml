@@ -60,7 +60,7 @@
       <hibernate-validator-version>8.0.1.Final</hibernate-validator-version>
       <io-admin-shell-aas-model>1.2.0</io-admin-shell-aas-model>
       <io-admin-shell-aas-serializer>1.2.1</io-admin-shell-aas-serializer>
-      <aas4j-version>1.0.0-milestone-03.1</aas4j-version>
+      <aas4j-version>1.0.0-milestone-04</aas4j-version>
       <jackson-version>2.15.2</jackson-version>
       <jackson-databind-version>2.15.2</jackson-databind-version>
       <jakarta-el-version>5.0.0-M1</jakarta-el-version>
