@@ -761,7 +761,7 @@
             <artifactId>versions-maven-plugin</artifactId>
             <version>${versions-maven-plugin-version}</version>
             <configuration>
-               <ignoredVersions>.*-alpha.*,.*-rc[0-9]+.*,.*-ALPHA.*,.*-BETA.*</ignoredVersions>
+               <ignoredVersions>.*[\.-](?i)(alpha|beta|(rc[0-9]+)|(m\d+)).*</ignoredVersions>
             </configuration>
          </plugin>
       </plugins>
