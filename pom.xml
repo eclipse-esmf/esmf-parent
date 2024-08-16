@@ -73,6 +73,7 @@
       <junit-jupiter-version>5.10.3</junit-jupiter-version>
       <logback-version>1.5.6</logback-version>
       <lombok-version>1.18.24</lombok-version>
+      <github-api-version>1.123</github-api-version>
       <maven-plugin-annotations-version>3.13.1</maven-plugin-annotations-version>
       <!-- Can't update to 3.9.5: sisu-inject usage in maven-plugin-testing-hardness is broken -->
       <maven-plugin-dependencies-version>3.8.1</maven-plugin-dependencies-version>
@@ -332,6 +333,11 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
             <version>${logback-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.kohsuke</groupId>
+            <artifactId>github-api</artifactId>
+            <version>${github-api-version}</version>
          </dependency>
          <dependency>
             <groupId>org.apache.maven.plugin-tools</groupId>
