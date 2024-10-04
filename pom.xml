@@ -335,6 +335,11 @@
             <version>${logback-version}</version>
          </dependency>
          <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok-version}</version>
+         </dependency>
+         <dependency>
             <groupId>org.kohsuke</groupId>
             <artifactId>github-api</artifactId>
             <version>${github-api-version}</version>
