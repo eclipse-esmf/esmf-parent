@@ -19,7 +19,7 @@
    <groupId>org.eclipse.esmf</groupId>
    <artifactId>esmf-parent</artifactId>
    <name>ESMF Parent</name>
-   <version>DEV-SNAPSHOT</version>
+   <version>16</version>
    <packaging>pom</packaging>
 
    <description>ESMF Parent</description>
