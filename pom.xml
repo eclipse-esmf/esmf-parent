@@ -54,7 +54,7 @@
       <commons-codec-version>1.18.0</commons-codec-version>
       <commons-text-version>1.13.0</commons-text-version>
       <easy-random-version>5.0.0</easy-random-version>
-      <graalvm-version>23.0.5</graalvm-version>
+      <graalvm-version>24.1.2</graalvm-version>
       <graph-support-version>1.5.0</graph-support-version>
       <guava-version>33.4.0-jre</guava-version>
       <guice-version>7.0.0</guice-version>
@@ -800,8 +800,7 @@
                <ignoredVersions>.*[\.-](?i)(alpha|beta|(rc[0-9]+)|(m\d+)).*</ignoredVersions>
                <!-- Reasons for version update exclusions: -->
                <!-- maven-plugin-dependencies-version: Can't update to 3.9.5: sisu-inject usage in maven-plugin-testing-hardness is broken -->
-               <!-- graalvm-version: graalvm-version >23 requires Java >= 21 -->
-               <excludeProperties>graalvm-version,maven-plugin-dependencies-version</excludeProperties>
+               <excludeProperties>maven-plugin-dependencies-version</excludeProperties>
             </configuration>
          </plugin>
       </plugins>
