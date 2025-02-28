@@ -69,10 +69,12 @@
       <json-path-version>2.9.0</json-path-version>
       <json-schema-validator-version>2.2.14</json-schema-validator-version>
       <junit-jupiter-version>5.11.4</junit-jupiter-version>
+      <log4j-version>2.22.1</log4j-version>
       <logback-version>1.5.16</logback-version>
       <lombok-version>1.18.36</lombok-version>
       <maven-plugin-annotations-version>3.15.1</maven-plugin-annotations-version>
       <maven-plugin-dependencies-version>3.8.1</maven-plugin-dependencies-version>
+      <mojo-executor-version>2.4.0</mojo-executor-version>
       <picocli-version>4.7.6</picocli-version>
       <poi-version>5.4.0</poi-version>
       <record-builder-version>44</record-builder-version>
@@ -119,6 +121,7 @@
       <nexus-staging-maven-plugin-version>1.7.0</nexus-staging-maven-plugin-version>
       <properties-maven-plugin-version>1.2.1</properties-maven-plugin-version>
       <versions-maven-plugin-version>2.18.0</versions-maven-plugin-version>
+      <wagon-maven-plugin-version>1.0</wagon-maven-plugin-version>
 
       <!-- General settings -->
       <testreports.surefire>surefire-report</testreports.surefire>
@@ -322,6 +325,21 @@
             <version>${junit-jupiter-version}</version>
          </dependency>
          <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-to-slf4j</artifactId>
+            <version>${log4j-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j-version}</version>
+         </dependency>
+         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>${logback-version}</version>
@@ -360,6 +378,11 @@
             <groupId>org.apache.maven.plugin-testing</groupId>
             <artifactId>maven-plugin-testing-harness</artifactId>
             <version>${maven-plugin-testing-harness-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.twdata.maven</groupId>
+            <artifactId>mojo-executor</artifactId>
+            <version>${mojo-executor-version}</version>
          </dependency>
          <dependency>
             <groupId>info.picocli</groupId>
@@ -583,9 +606,14 @@
                <version>${properties-maven-plugin-version}</version>
             </plugin>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>versions-maven-plugin</artifactId>
-                <version>${versions-maven-plugin-version}</version>
+               <groupId>org.codehaus.mojo</groupId>
+               <artifactId>versions-maven-plugin</artifactId>
+               <version>${versions-maven-plugin-version}</version>
+            </plugin>
+            <plugin>
+               <groupId>org.codehaus.mojo</groupId>
+               <artifactId>wagon-maven-plugin</artifactId>
+               <version>${wagon-maven-plugin-version}</version>
             </plugin>
          </plugins>
       </pluginManagement>
