@@ -54,13 +54,13 @@
       <commons-codec-version>1.18.0</commons-codec-version>
       <commons-text-version>1.13.0</commons-text-version>
       <easy-random-version>5.0.0</easy-random-version>
-      <graalvm-version>23.0.5</graalvm-version>
-      <graph-support-version>1.4.0</graph-support-version>
+      <graalvm-version>24.1.2</graalvm-version>
+      <graph-support-version>1.5.0</graph-support-version>
       <guava-version>33.4.0-jre</guava-version>
       <guice-version>7.0.0</guice-version>
       <hibernate-validator-version>8.0.2.Final</hibernate-validator-version>
-      <jackson-databind-version>2.18.2</jackson-databind-version>
-      <jackson-version>2.18.2</jackson-version>
+      <jackson-databind-version>2.18.3</jackson-databind-version>
+      <jackson-version>2.18.3</jackson-version>
       <jakarta-el-version>5.0.0-M1</jakarta-el-version>
       <jansi-version>2.4.1</jansi-version>
       <javaparser-version>3.26.3</javaparser-version>
@@ -68,41 +68,43 @@
       <jqwik-version>1.9.2</jqwik-version>
       <json-path-version>2.9.0</json-path-version>
       <json-schema-validator-version>2.2.14</json-schema-validator-version>
-      <junit-jupiter-version>5.11.4</junit-jupiter-version>
-      <logback-version>1.5.16</logback-version>
+      <junit-jupiter-version>5.12.0</junit-jupiter-version>
+      <log4j-version>2.24.3</log4j-version>
+      <logback-version>1.5.17</logback-version>
       <lombok-version>1.18.36</lombok-version>
       <maven-plugin-annotations-version>3.15.1</maven-plugin-annotations-version>
       <maven-plugin-dependencies-version>3.8.1</maven-plugin-dependencies-version>
+      <mojo-executor-version>2.4.1</mojo-executor-version>
       <picocli-version>4.7.6</picocli-version>
       <poi-version>5.4.0</poi-version>
       <record-builder-version>44</record-builder-version>
       <rgxgen-version>2.0</rgxgen-version>
       <rhino-version>1.8.0</rhino-version>
       <roaster-version>2.30.1.Final</roaster-version>
-      <slf4j-api-version>2.0.16</slf4j-api-version>
-      <spring-boot-version>3.4.2</spring-boot-version>
+      <slf4j-api-version>2.0.17</slf4j-api-version>
+      <spring-boot-version>3.4.3</spring-boot-version>
       <swagger-parser-version>2.1.25</swagger-parser-version>
-      <tika-version>3.0.0</tika-version>
-      <validation-api-version>3.1.0</validation-api-version>
-      <vavr-version>0.10.5</vavr-version>
+      <tika-version>3.1.0</tika-version>
+      <validation-api-version>3.1.1</validation-api-version>
+      <vavr-version>0.10.6</vavr-version>
       <velocity-version>2.4.1</velocity-version>
 
       <!-- Versions of plugins -->
       <build-helper-maven-plugin-version>3.6.0</build-helper-maven-plugin-version>
       <download-maven-plugin-version>1.13.0</download-maven-plugin-version>
       <exec-maven-plugin-version>3.5.0</exec-maven-plugin-version>
-      <flatten-maven-plugin-version>1.6.0</flatten-maven-plugin-version>
+      <flatten-maven-plugin-version>1.7.0</flatten-maven-plugin-version>
       <git-commit-id-plugin-version>4.9.10</git-commit-id-plugin-version>
       <groovy-maven-plugin-version>2.1.1</groovy-maven-plugin-version>
       <jacoco-maven-plugin-version>0.8.12</jacoco-maven-plugin-version>
-      <maven-clean-plugin-version>3.4.0</maven-clean-plugin-version>
-      <maven-compiler-plugin-version>3.13.0</maven-compiler-plugin-version>
+      <maven-clean-plugin-version>3.4.1</maven-clean-plugin-version>
+      <maven-compiler-plugin-version>3.14.0</maven-compiler-plugin-version>
       <maven-dependency-plugin-version>3.8.1</maven-dependency-plugin-version>
-      <maven-deploy-plugin-version>3.1.3</maven-deploy-plugin-version>
+      <maven-deploy-plugin-version>3.1.4</maven-deploy-plugin-version>
       <maven-enforcer-plugin-version>3.5.0</maven-enforcer-plugin-version>
       <maven-failsafe-plugin-version>3.5.2</maven-failsafe-plugin-version>
       <maven-gpg-plugin-version>3.2.7</maven-gpg-plugin-version>
-      <maven-install-plugin-version>3.1.3</maven-install-plugin-version>
+      <maven-install-plugin-version>3.1.4</maven-install-plugin-version>
       <maven-jar-plugin-version>3.4.2</maven-jar-plugin-version>
       <maven-javadoc-plugin-version>3.11.2</maven-javadoc-plugin-version>
       <maven-plugin-plugin-version>3.15.1</maven-plugin-plugin-version>
@@ -115,17 +117,18 @@
       <maven-surefire-junit5-tree-reporter-version>1.4.0</maven-surefire-junit5-tree-reporter-version>
       <maven-surefire-plugin-version>3.5.2</maven-surefire-plugin-version>
       <maven-surefire-report-plugin-version>3.5.2</maven-surefire-report-plugin-version>
-      <native-maven-plugin-version>0.10.4</native-maven-plugin-version>
+      <native-maven-plugin-version>0.10.5</native-maven-plugin-version>
       <nexus-staging-maven-plugin-version>1.7.0</nexus-staging-maven-plugin-version>
       <properties-maven-plugin-version>1.2.1</properties-maven-plugin-version>
       <versions-maven-plugin-version>2.18.0</versions-maven-plugin-version>
+      <wagon-maven-plugin-version>2.0.2</wagon-maven-plugin-version>
 
       <!-- General settings -->
       <testreports.surefire>surefire-report</testreports.surefire>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
       <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-      <java-target-version>17</java-target-version>
-      <java-source-version>17</java-source-version>
+      <java-target-version>21</java-target-version>
+      <java-source-version>21</java-source-version>
    </properties>
 
    <dependencyManagement>
@@ -203,8 +206,13 @@
             <version>${graalvm-version}</version>
          </dependency>
          <dependency>
+            <groupId>org.graalvm.polyglot</groupId>
+            <artifactId>polyglot</artifactId>
+            <version>${graalvm-version}</version>
+         </dependency>
+         <dependency>
             <groupId>org.graphper</groupId>
-            <artifactId>graph-support</artifactId>
+            <artifactId>graph-support-core</artifactId>
             <version>${graph-support-version}</version>
          </dependency>
          <dependency>
@@ -322,6 +330,21 @@
             <version>${junit-jupiter-version}</version>
          </dependency>
          <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-to-slf4j</artifactId>
+            <version>${log4j-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j-version}</version>
+         </dependency>
+         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>${logback-version}</version>
@@ -360,6 +383,11 @@
             <groupId>org.apache.maven.plugin-testing</groupId>
             <artifactId>maven-plugin-testing-harness</artifactId>
             <version>${maven-plugin-testing-harness-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.twdata.maven</groupId>
+            <artifactId>mojo-executor</artifactId>
+            <version>${mojo-executor-version}</version>
          </dependency>
          <dependency>
             <groupId>info.picocli</groupId>
@@ -583,9 +611,14 @@
                <version>${properties-maven-plugin-version}</version>
             </plugin>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>versions-maven-plugin</artifactId>
-                <version>${versions-maven-plugin-version}</version>
+               <groupId>org.codehaus.mojo</groupId>
+               <artifactId>versions-maven-plugin</artifactId>
+               <version>${versions-maven-plugin-version}</version>
+            </plugin>
+            <plugin>
+               <groupId>org.codehaus.mojo</groupId>
+               <artifactId>wagon-maven-plugin</artifactId>
+               <version>${wagon-maven-plugin-version}</version>
             </plugin>
          </plugins>
       </pluginManagement>
@@ -772,8 +805,7 @@
                <ignoredVersions>.*[\.-](?i)(alpha|beta|(rc[0-9]+)|(m\d+)).*</ignoredVersions>
                <!-- Reasons for version update exclusions: -->
                <!-- maven-plugin-dependencies-version: Can't update to 3.9.5: sisu-inject usage in maven-plugin-testing-hardness is broken -->
-               <!-- graalvm-version: graalvm-version >23 requires Java >= 21 -->
-               <excludeProperties>graalvm-version,maven-plugin-dependencies-version</excludeProperties>
+               <excludeProperties>maven-plugin-dependencies-version</excludeProperties>
             </configuration>
          </plugin>
       </plugins>
