@@ -206,6 +206,11 @@
             <version>${graalvm-version}</version>
          </dependency>
          <dependency>
+            <groupId>org.graalvm.polyglot</groupId>
+            <artifactId>polyglot</artifactId>
+            <version>${graalvm-version}</version>
+         </dependency>
+         <dependency>
             <groupId>org.graphper</groupId>
             <artifactId>graph-support-core</artifactId>
             <version>${graph-support-version}</version>
