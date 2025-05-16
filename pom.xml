@@ -46,7 +46,7 @@
 
    <properties>
       <aas4j-version>1.0.4</aas4j-version>
-      <aspect-meta-model-version>2.1.0</aspect-meta-model-version>
+      <aspect-meta-model-version>2.2.0</aspect-meta-model-version>
       <assertj-core-version>3.27.3</assertj-core-version>
       <assertj-vavr-version>0.4.3</assertj-vavr-version>
       <batik-version>1.18</batik-version>
