@@ -26,13 +26,14 @@ jobs:
         gpg-passphrase: PGP_KEY_PASSWORD
         overwrite-settings: false
 
-    - name: Build artifact and create bundle for Maven Central
+    - name: Build artifact and release to Maven Central
       run: |
         set -x
         ./mvnw -B versions:set -DnewVersion=${{ github.event.inputs.release_version }}
         ./mvnw -B versions:commit
         ./mvnw -B -U clean deploy -Psign,release-build
       env:
+        PGP_KEY_PASSWORD: ${{ secrets.PGP_KEY_PASSWORD }}
         CENTRAL_USERNAME: ${{ secrets.CENTRAL_SONATYPE_TOKEN_USERNAME }}
         CENTRAL_TOKEN: ${{ secrets.CENTRAL_SONATYPE_TOKEN_PASSWORD }}
 
