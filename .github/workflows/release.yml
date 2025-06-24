@@ -20,8 +20,8 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
         server-id: central
-        server-username: CENTRAL_SONATYPE_TOKEN_USERNAME
-        server-password: CENTRAL_SONATYPE_TOKEN_PASSWORD
+        server-username: MAVEN_CENTRAL_USERNAME
+        server-password: MAVEN_CENTRAL_PASSWORD
         gpg-private-key: ${{ secrets.PGP_KEY }}
         gpg-passphrase: PGP_KEY_PASSWORD
         overwrite-settings: false
@@ -34,8 +34,8 @@ jobs:
         ./mvnw -B -U clean deploy -Psign,release-build
       env:
         PGP_KEY_PASSWORD: ${{ secrets.PGP_KEY_PASSWORD }}
-        CENTRAL_USERNAME: ${{ secrets.CENTRAL_SONATYPE_TOKEN_USERNAME }}
-        CENTRAL_TOKEN: ${{ secrets.CENTRAL_SONATYPE_TOKEN_PASSWORD }}
+        MAVEN_CENTRAL_USERNAME: ${{ secrets.CENTRAL_SONATYPE_TOKEN_USERNAME }}
+        MAVEN_CENTRAL_PASSWORD: ${{ secrets.CENTRAL_SONATYPE_TOKEN_PASSWORD }}
 
     # If the deployment to Maven Central went through, the following steps will
     # - Commit updated version to release branch
