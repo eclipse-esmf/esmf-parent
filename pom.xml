@@ -45,83 +45,92 @@
    </scm>
 
    <properties>
+      <!-- Don't update to 2.x until
+           https://github.com/eclipse-aas4j/aas4j/issues/448 is fixed -->
       <aas4j-version>1.0.4</aas4j-version>
       <aspect-meta-model-version>2.2.0</aspect-meta-model-version>
-      <assertj-core-version>3.27.3</assertj-core-version>
+      <assertj-core-version>3.27.6</assertj-core-version>
       <assertj-vavr-version>0.4.3</assertj-vavr-version>
-      <batik-version>1.18</batik-version>
-      <classgraph-version>4.8.179</classgraph-version>
-      <commons-codec-version>1.18.0</commons-codec-version>
-      <commons-text-version>1.13.0</commons-text-version>
+      <batik-version>1.19</batik-version>
+      <classgraph-version>4.8.184</classgraph-version>
+      <commons-codec-version>1.20.0</commons-codec-version>
+      <commons-compress-version>1.28.0</commons-compress-version>
+      <commons-exec-version>1.6.0</commons-exec-version>
+      <commons-io-version>2.21.0</commons-io-version>
+      <commons-text-version>1.14.0</commons-text-version>
       <easy-random-version>5.0.0</easy-random-version>
-      <graalvm-version>24.1.2</graalvm-version>
-      <graph-support-version>1.5.0</graph-support-version>
-      <guava-version>33.4.0-jre</guava-version>
+      <graalvm-version>25.0.1</graalvm-version>
+      <graph-support-version>1.5.2</graph-support-version>
+      <guava-version>33.5.0-jre</guava-version>
       <guice-version>7.0.0</guice-version>
-      <hibernate-validator-version>8.0.2.Final</hibernate-validator-version>
-      <jackson-databind-version>2.18.3</jackson-databind-version>
-      <jackson-version>2.18.3</jackson-version>
+      <hibernate-validator-version>8.0.3.Final</hibernate-validator-version>
+      <jackson-annotations-version>2.20</jackson-annotations-version>
+      <jackson-databind-version>2.20.1</jackson-databind-version>
+      <jackson-dataformat-xml-version>2.20.1</jackson-dataformat-xml-version>
+      <jackson-version>2.20.1</jackson-version>
       <jakarta-el-version>5.0.0-M1</jakarta-el-version>
-      <jansi-version>2.4.1</jansi-version>
-      <javaparser-version>3.26.3</javaparser-version>
-      <jena-version>5.3.0</jena-version>
-      <jqwik-version>1.9.2</jqwik-version>
-      <json-path-version>2.9.0</json-path-version>
+      <jakarta-version>6.1.0</jakarta-version>
+      <jansi-version>2.4.2</jansi-version>
+      <javaparser-version>3.27.1</javaparser-version>
+      <jena-version>5.6.0</jena-version>
+      <jspecify-version>1.0.0</jspecify-version>
+      <jqwik-version>1.9.3</jqwik-version>
+      <json-path-version>2.10.0</json-path-version>
       <json-schema-validator-version>2.2.14</json-schema-validator-version>
-      <junit-jupiter-version>5.12.0</junit-jupiter-version>
-      <log4j-version>2.24.3</log4j-version>
-      <logback-version>1.5.17</logback-version>
-      <lombok-version>1.18.36</lombok-version>
-      <maven-plugin-annotations-version>3.15.1</maven-plugin-annotations-version>
+      <junit-jupiter-version>6.0.1</junit-jupiter-version>
+      <log4j-version>2.25.2</log4j-version>
+      <logback-version>1.5.21</logback-version>
+      <lombok-version>1.18.42</lombok-version>
+      <maven-plugin-annotations-version>3.15.2</maven-plugin-annotations-version>
       <maven-plugin-dependencies-version>3.8.1</maven-plugin-dependencies-version>
       <mojo-executor-version>2.4.1</mojo-executor-version>
-      <picocli-version>4.7.6</picocli-version>
-      <poi-version>5.4.0</poi-version>
-      <record-builder-version>44</record-builder-version>
-      <rgxgen-version>2.0</rgxgen-version>
-      <rhino-version>1.8.0</rhino-version>
-      <roaster-version>2.30.1.Final</roaster-version>
+      <picocli-version>4.7.7</picocli-version>
+      <poi-version>5.5.1</poi-version>
+      <record-builder-version>51</record-builder-version>
+      <rgxgen-version>3.1</rgxgen-version>
+      <rhino-version>1.8.1</rhino-version>
+      <roaster-version>2.30.3.Final</roaster-version>
       <slf4j-api-version>2.0.17</slf4j-api-version>
-      <spring-boot-version>3.4.3</spring-boot-version>
-      <swagger-parser-version>2.1.25</swagger-parser-version>
-      <tika-version>3.1.0</tika-version>
+      <spring-boot-version>4.0.0</spring-boot-version>
+      <swagger-parser-version>2.1.36</swagger-parser-version>
+      <tika-version>3.2.3</tika-version>
       <validation-api-version>3.1.1</validation-api-version>
-      <vavr-version>0.10.6</vavr-version>
+      <vavr-version>0.10.7</vavr-version>
       <velocity-version>2.4.1</velocity-version>
-      <commonmark-version>0.24.0</commonmark-version>
+      <commonmark-version>0.27.0</commonmark-version>
 
       <!-- Versions of plugins -->
-      <build-helper-maven-plugin-version>3.6.0</build-helper-maven-plugin-version>
+      <build-helper-maven-plugin-version>3.6.1</build-helper-maven-plugin-version>
       <download-maven-plugin-version>1.13.0</download-maven-plugin-version>
-      <exec-maven-plugin-version>3.5.0</exec-maven-plugin-version>
-      <flatten-maven-plugin-version>1.7.0</flatten-maven-plugin-version>
+      <exec-maven-plugin-version>3.6.2</exec-maven-plugin-version>
+      <flatten-maven-plugin-version>1.7.3</flatten-maven-plugin-version>
       <git-commit-id-plugin-version>4.9.10</git-commit-id-plugin-version>
       <groovy-maven-plugin-version>2.1.1</groovy-maven-plugin-version>
-      <jacoco-maven-plugin-version>0.8.12</jacoco-maven-plugin-version>
-      <maven-clean-plugin-version>3.4.1</maven-clean-plugin-version>
-      <maven-compiler-plugin-version>3.14.0</maven-compiler-plugin-version>
-      <maven-dependency-plugin-version>3.8.1</maven-dependency-plugin-version>
+      <jacoco-maven-plugin-version>0.8.14</jacoco-maven-plugin-version>
+      <maven-clean-plugin-version>3.5.0</maven-clean-plugin-version>
+      <maven-compiler-plugin-version>3.14.1</maven-compiler-plugin-version>
+      <maven-dependency-plugin-version>3.9.0</maven-dependency-plugin-version>
       <maven-deploy-plugin-version>3.1.4</maven-deploy-plugin-version>
-      <maven-enforcer-plugin-version>3.5.0</maven-enforcer-plugin-version>
-      <maven-failsafe-plugin-version>3.5.2</maven-failsafe-plugin-version>
-      <maven-gpg-plugin-version>3.2.7</maven-gpg-plugin-version>
+      <maven-enforcer-plugin-version>3.6.2</maven-enforcer-plugin-version>
+      <maven-failsafe-plugin-version>3.5.4</maven-failsafe-plugin-version>
+      <maven-gpg-plugin-version>3.2.8</maven-gpg-plugin-version>
       <maven-install-plugin-version>3.1.4</maven-install-plugin-version>
-      <maven-jar-plugin-version>3.4.2</maven-jar-plugin-version>
-      <maven-javadoc-plugin-version>3.11.2</maven-javadoc-plugin-version>
-      <maven-plugin-plugin-version>3.15.1</maven-plugin-plugin-version>
-      <maven-plugin-testing-harness-version>3.3.0</maven-plugin-testing-harness-version>
-      <maven-resources-plugin-version>3.3.1</maven-resources-plugin-version>
-      <maven-scm-plugin-version>2.1.0</maven-scm-plugin-version>
-      <maven-shade-plugin-version>3.6.0</maven-shade-plugin-version>
+      <maven-jar-plugin-version>3.5.0</maven-jar-plugin-version>
+      <maven-javadoc-plugin-version>3.12.0</maven-javadoc-plugin-version>
+      <maven-plugin-plugin-version>3.15.2</maven-plugin-plugin-version>
+      <maven-plugin-testing-harness-version>3.4.0</maven-plugin-testing-harness-version>
+      <maven-resources-plugin-version>3.4.0</maven-resources-plugin-version>
+      <maven-scm-plugin-version>2.2.1</maven-scm-plugin-version>
+      <maven-shade-plugin-version>3.6.1</maven-shade-plugin-version>
       <maven-site-plugin-version>4.0.0-M13</maven-site-plugin-version>
-      <maven-source-plugin-version>3.3.1</maven-source-plugin-version>
-      <maven-surefire-junit5-tree-reporter-version>1.4.0</maven-surefire-junit5-tree-reporter-version>
-      <maven-surefire-plugin-version>3.5.2</maven-surefire-plugin-version>
-      <maven-surefire-report-plugin-version>3.5.2</maven-surefire-report-plugin-version>
-      <native-maven-plugin-version>0.10.5</native-maven-plugin-version>
-      <central-publishing-maven-plugin-version>0.8.0</central-publishing-maven-plugin-version>
+      <maven-source-plugin-version>3.4.0</maven-source-plugin-version>
+      <maven-surefire-junit5-tree-reporter-version>1.5.1</maven-surefire-junit5-tree-reporter-version>
+      <maven-surefire-plugin-version>3.5.4</maven-surefire-plugin-version>
+      <maven-surefire-report-plugin-version>3.5.4</maven-surefire-report-plugin-version>
+      <native-maven-plugin-version>0.11.3</native-maven-plugin-version>
+      <central-publishing-maven-plugin-version>0.9.0</central-publishing-maven-plugin-version>
       <properties-maven-plugin-version>1.2.1</properties-maven-plugin-version>
-      <versions-maven-plugin-version>2.18.0</versions-maven-plugin-version>
+      <versions-maven-plugin-version>2.20.1</versions-maven-plugin-version>
       <wagon-maven-plugin-version>2.0.2</wagon-maven-plugin-version>
 
       <!-- General settings -->
@@ -166,9 +175,24 @@
             <version>${classgraph-version}</version>
          </dependency>
          <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-exec</artifactId>
+            <version>${commons-exec-version}</version>
+         </dependency>
+         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
             <version>${commons-codec-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-compress</artifactId>
+            <version>${commons-compress-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io-version}</version>
          </dependency>
          <dependency>
             <groupId>org.apache.commons</groupId>
@@ -267,7 +291,7 @@
          <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
-            <version>${jackson-version}</version>
+            <version>${jackson-annotations-version}</version>
          </dependency>
          <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -278,6 +302,11 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${jackson-databind-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+            <version>${jackson-dataformat-xml-version}</version>
          </dependency>
          <dependency>
             <groupId>org.glassfish</groupId>
@@ -311,6 +340,11 @@
             <version>${jena-version}</version>
          </dependency>
          <dependency>
+            <groupId>org.jspecify</groupId>
+            <artifactId>jspecify</artifactId>
+            <version>${jspecify-version}</version>
+         </dependency>
+         <dependency>
             <groupId>net.jqwik</groupId>
             <artifactId>jqwik</artifactId>
             <version>${jqwik-version}</version>
@@ -328,6 +362,21 @@
          <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
+            <version>${junit-jupiter-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit-jupiter-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit-jupiter-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
             <version>${junit-jupiter-version}</version>
          </dependency>
          <dependency>
@@ -454,6 +503,11 @@
             <groupId>jakarta.validation</groupId>
             <artifactId>jakarta.validation-api</artifactId>
             <version>${validation-api-version}</version>
+         </dependency>
+         <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>${jakarta-version}</version>
          </dependency>
          <dependency>
             <groupId>io.vavr</groupId>
