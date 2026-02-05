@@ -9,6 +9,11 @@ env:
   RELEASE_VERSION: ${{ github.event.inputs.release_version }}
 jobs:
   build-and-release:
+    permissions:
+      contents: write
+      actions: read
+      issues: write
+      pull-requests: write
     runs-on: ubuntu-latest
     name: "Build and release"
 
