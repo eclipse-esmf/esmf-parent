@@ -45,8 +45,6 @@
    </scm>
 
    <properties>
-      <!-- Don't update to 2.x until
-           https://github.com/eclipse-aas4j/aas4j/issues/448 is fixed -->
       <aas4j-version>1.0.4</aas4j-version>
       <aspect-meta-model-version>2.2.0</aspect-meta-model-version>
       <assertj-core-version>3.27.7</assertj-core-version>
@@ -843,7 +841,8 @@
                <ignoredVersions>.*[\.-](?i)(alpha|beta|(rc[0-9]+)|(m\d+)).*</ignoredVersions>
                <!-- Reasons for version update exclusions: -->
                <!-- maven-plugin-dependencies-version: Can't update to 3.9.5: sisu-inject usage in maven-plugin-testing-hardness is broken -->
-               <excludeProperties>maven-plugin-dependencies-version</excludeProperties>
+               <!-- aas4j: Don't update to 2.x until https://github.com/eclipse-aas4j/aas4j/issues/448 is fixed -->
+               <excludeProperties>maven-plugin-dependencies-version,aas4j-version</excludeProperties>
             </configuration>
          </plugin>
       </plugins>
