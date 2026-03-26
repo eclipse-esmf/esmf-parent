@@ -50,6 +50,7 @@
       <assertj-core.version>3.27.7</assertj-core.version>
       <assertj-vavr.version>0.4.3</assertj-vavr.version>
       <batik.version>1.19</batik.version>
+      <checkstyle.version>10.26.1</checkstyle.version>
       <classgraph.version>4.8.184</classgraph.version>
       <commonmark.version>0.27.1</commonmark.version>
       <commons-codec.version>1.21.0</commons-codec.version>
@@ -106,6 +107,7 @@
       <git-commit-id-plugin.version>4.9.10</git-commit-id-plugin.version>
       <groovy-maven-plugin.version>2.1.1</groovy-maven-plugin.version>
       <jacoco-maven-plugin.version>0.8.14</jacoco-maven-plugin.version>
+      <maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
       <maven-clean-plugin.version>3.5.0</maven-clean-plugin.version>
       <maven-compiler-plugin.version>3.15.0</maven-compiler-plugin.version>
       <maven-dependency-plugin.version>3.9.0</maven-dependency-plugin.version>
@@ -556,6 +558,25 @@
                <groupId>org.jacoco</groupId>
                <artifactId>jacoco-maven-plugin</artifactId>
                <version>${jacoco-maven-plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>${maven-checkstyle-plugin.version}</version>
+                <configuration>
+                    <configLocation>${maven.multiModuleProjectDirectory}/.development/esmf-checkstyle.xml</configLocation>
+                    <consoleOutput>true</consoleOutput>
+                    <failsOnError>true</failsOnError>
+                    <failOnViolation>true</failOnViolation>
+                    <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.puppycrawl.tools</groupId>
+                        <artifactId>checkstyle</artifactId>
+                        <version>${checkstyle.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
             <plugin>
                <groupId>org.apache.maven.plugins</groupId>
