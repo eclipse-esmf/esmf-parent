@@ -88,7 +88,6 @@
       <poi.version>5.5.1</poi.version>
       <record-builder.version>52</record-builder.version>
       <rgxgen.version>3.1</rgxgen.version>
-      <rhino.version>1.9.0</rhino.version>
       <roaster.version>2.31.0.Final</roaster.version>
       <slf4j-api.version>2.0.17</slf4j-api.version>
       <spring-boot.version>4.0.2</spring-boot.version>
@@ -452,11 +451,6 @@
             <groupId>com.github.curious-odd-man</groupId>
             <artifactId>rgxgen</artifactId>
             <version>${rgxgen.version}</version>
-         </dependency>
-         <dependency>
-            <groupId>org.mozilla</groupId>
-            <artifactId>rhino</artifactId>
-            <version>${rhino.version}</version>
          </dependency>
          <dependency>
             <groupId>org.jboss.forge.roaster</groupId>
