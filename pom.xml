@@ -100,7 +100,7 @@
 
       <!-- Versions of plugins -->
       <build-helper-maven-plugin.version>3.6.1</build-helper-maven-plugin.version>
-      <central-publishing-maven-plugin.version>0.10.0</central-publishing-maven-plugin.version>
+      <central-publishing-maven-plugin.version>0.8.0</central-publishing-maven-plugin.version>
       <exec-maven-plugin.version>3.6.3</exec-maven-plugin.version>
       <flatten-maven-plugin.version>1.7.3</flatten-maven-plugin.version>
       <git-commit-id-plugin.version>4.9.10</git-commit-id-plugin.version>
@@ -868,9 +868,11 @@
             <configuration>
                <ignoredVersions>.*[\.-](?i)(alpha|beta|(rc[0-9]+)|(m\d+)).*</ignoredVersions>
                <!-- Reasons for version update exclusions: -->
+               <!-- central-publishing-maven-plugin.version: Don't update beyond
+               0.8.0 because central-bundle functionality is broken -->
                <!-- maven-plugin-dependencies.version: Can't update to 3.9.5: sisu-inject usage in maven-plugin-testing-hardness is broken -->
                <!-- aas4j: Don't update to 2.x until https://github.com/eclipse-aas4j/aas4j/issues/448 is fixed -->
-               <excludeProperties>maven-plugin-dependencies.version,aas4j.version</excludeProperties>
+               <excludeProperties>central-publishing-maven-plugin.version,maven-plugin-dependencies.version,aas4j.version</excludeProperties>
             </configuration>
          </plugin>
       </plugins>
