@@ -671,11 +671,11 @@
                     <!-- General formats -->
                     <format>
                        <includes>
-                          <include>**/*.java</include>
                           <include>**/*.md</include>
                           <include>**/*.adoc</include>
                           <include>**/*.ttl</include>
                           <include>**/*.xml</include>
+                          <include>**/*.yml</include>
                        </includes>
                        <trimTrailingWhitespace/>
                        <endWithNewline/>
@@ -692,6 +692,10 @@
                        <version>${spotless-maven-plugin-eclipse.version}</version>
                        <file>${maven.multiModuleProjectDirectory}/.development/esmf-eclipse-codestyle.xml</file>
                     </eclipse>
+                    <trimTrailingWhitespace/>
+                    <endWithNewline/>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <lineEndings>UNIX</lineEndings>
                  </java>
               </configuration>
             </plugin>
