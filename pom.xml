@@ -49,6 +49,7 @@
       <aspect-meta-model.version>2.2.0</aspect-meta-model.version>
       <assertj-core.version>3.27.7</assertj-core.version>
       <assertj-vavr.version>0.5.0</assertj-vavr.version>
+      <avro.version>1.12.1</avro.version>
       <batik.version>1.19</batik.version>
       <checkstyle.version>13.3.0</checkstyle.version>
       <classgraph.version>4.8.184</classgraph.version>
@@ -63,6 +64,7 @@
       <graph-support.version>1.5.2</graph-support.version>
       <guava.version>33.5.0-jre</guava.version>
       <guice.version>7.0.0</guice.version>
+      <hadoop-client.version>3.4.1</hadoop-client.version>
       <hibernate-validator.version>8.0.3.Final</hibernate-validator.version>
       <jackson-annotations.version>2.21</jackson-annotations.version>
       <jackson-databind.version>2.21.2</jackson-databind.version>
@@ -81,9 +83,13 @@
       <log4j.version>2.25.3</log4j.version>
       <logback.version>1.5.32</logback.version>
       <lombok.version>1.18.44</lombok.version>
+      <lsp4j.version>1.0.0</lsp4j.version>
       <maven-plugin-annotations.version>3.15.2</maven-plugin-annotations.version>
       <maven-plugin-dependencies.version>3.8.1</maven-plugin-dependencies.version>
+      <mockito.version>5.20.0</mockito.version>
       <mojo-executor.version>2.4.1</mojo-executor.version>
+      <parquet-avro.version>1.15.2</parquet-avro.version>
+      <parquet-hadoop.version>1.15.2</parquet-hadoop.version>
       <picocli.version>4.7.7</picocli.version>
       <poi.version>5.5.1</poi.version>
       <record-builder.version>52</record-builder.version>
@@ -97,12 +103,15 @@
       <vavr.version>1.0.1</vavr.version>
       <velocity.version>2.4.1</velocity.version>
       <xerces.version>2.12.2</xerces.version>
+      <xz.version>1.11</xz.version>
 
       <!-- Versions of plugins -->
       <build-helper-maven-plugin.version>3.6.1</build-helper-maven-plugin.version>
       <central-publishing-maven-plugin.version>0.8.0</central-publishing-maven-plugin.version>
+      <download-maven-plugin.version>1.9.0</download-maven-plugin.version>
       <exec-maven-plugin.version>3.6.3</exec-maven-plugin.version>
       <flatten-maven-plugin.version>1.7.3</flatten-maven-plugin.version>
+      <frontend-maven-plugin.version>1.12.1</frontend-maven-plugin.version>
       <git-commit-id-plugin.version>4.9.10</git-commit-id-plugin.version>
       <groovy-maven-plugin.version>2.1.1</groovy-maven-plugin.version>
       <jacoco-maven-plugin.version>0.8.14</jacoco-maven-plugin.version>
@@ -155,6 +164,11 @@
             <groupId>org.assertj</groupId>
             <artifactId>assertj-vavr</artifactId>
             <version>${assertj-vavr.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.apache.avro</groupId>
+            <artifactId>avro</artifactId>
+            <version>${avro.version}</version>
          </dependency>
          <dependency>
             <groupId>org.apache.xmlgraphics</groupId>
@@ -242,6 +256,11 @@
             <groupId>com.google.inject</groupId>
             <artifactId>guice</artifactId>
             <version>${guice.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-client</artifactId>
+            <version>${hadoop-client.version}</version>
          </dependency>
          <dependency>
             <groupId>org.eclipse.digitaltwin.aas4j</groupId>
@@ -403,6 +422,11 @@
             <version>${lombok.version}</version>
          </dependency>
          <dependency>
+            <groupId>org.eclipse.lsp4j</groupId>
+            <artifactId>org.eclipse.lsp4j</artifactId>
+            <version>${lsp4j.version}</version>
+         </dependency>
+         <dependency>
             <groupId>org.apache.maven.plugin-tools</groupId>
             <artifactId>maven-plugin-annotations</artifactId>
             <version>${maven-plugin-annotations.version}</version>
@@ -428,9 +452,24 @@
             <version>${maven-plugin-testing-harness.version}</version>
          </dependency>
          <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.version}</version>
+         </dependency>
+         <dependency>
             <groupId>org.twdata.maven</groupId>
             <artifactId>mojo-executor</artifactId>
             <version>${mojo-executor.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.apache.parquet</groupId>
+            <artifactId>parquet-avro</artifactId>
+            <version>${parquet-avro.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.apache.parquet</groupId>
+            <artifactId>parquet-hadoop</artifactId>
+            <version>${parquet-hadoop.version}</version>
          </dependency>
          <dependency>
             <groupId>info.picocli</groupId>
@@ -512,6 +551,11 @@
             <artifactId>xercesImpl</artifactId>
             <version>${xerces.version}</version>
          </dependency>
+         <dependency>
+            <groupId>org.tukaani</groupId>
+            <artifactId>xz</artifactId>
+            <version>${xz.version}</version>
+         </dependency>
       </dependencies>
    </dependencyManagement>
 
@@ -529,6 +573,11 @@
                <version>${central-publishing-maven-plugin.version}</version>
             </plugin>
             <plugin>
+               <groupId>com.googlecode.maven-download-plugin</groupId>
+               <artifactId>download-maven-plugin</artifactId>
+               <version>${download-maven-plugin.version}</version>
+            </plugin>
+            <plugin>
                <groupId>org.codehaus.mojo</groupId>
                <artifactId>exec-maven-plugin</artifactId>
                <version>${exec-maven-plugin.version}</version>
@@ -537,6 +586,11 @@
                <groupId>org.codehaus.mojo</groupId>
                <artifactId>flatten-maven-plugin</artifactId>
                <version>${flatten-maven-plugin.version}</version>
+            </plugin>
+            <plugin>
+               <groupId>com.github.eirslett</groupId>
+               <artifactId>frontend-maven-plugin</artifactId>
+               <version>${frontend-maven-plugin.version}</version>
             </plugin>
             <plugin>
                <groupId>pl.project13.maven</groupId>
