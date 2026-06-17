@@ -45,13 +45,13 @@
    </scm>
 
    <properties>
-      <aas4j.version>1.0.4</aas4j.version>
+      <aas4j.version>2.0.2</aas4j.version>
       <aspect-meta-model.version>2.2.0</aspect-meta-model.version>
       <assertj-core.version>3.27.7</assertj-core.version>
       <assertj-vavr.version>0.5.1</assertj-vavr.version>
       <avro.version>1.12.1</avro.version>
       <batik.version>1.19</batik.version>
-      <checkstyle.version>13.5.0</checkstyle.version>
+      <checkstyle.version>13.6.0</checkstyle.version>
       <classgraph.version>4.8.184</classgraph.version>
       <commonmark.version>0.28.0</commonmark.version>
       <commons-codec.version>1.22.0</commons-codec.version>
@@ -97,7 +97,7 @@
       <roaster.version>2.31.0.Final</roaster.version>
       <slf4j-api.version>2.0.18</slf4j-api.version>
       <spring-boot.version>4.1.0</spring-boot.version>
-      <swagger-parser.version>2.1.43</swagger-parser.version>
+      <swagger-parser.version>2.1.44</swagger-parser.version>
       <tika.version>3.3.1</tika.version>
       <validation-api.version>3.1.1</validation-api.version>
       <vavr.version>1.0.1</vavr.version>
@@ -111,7 +111,7 @@
       <download-maven-plugin.version>1.13.0</download-maven-plugin.version>
       <exec-maven-plugin.version>3.6.3</exec-maven-plugin.version>
       <flatten-maven-plugin.version>1.7.3</flatten-maven-plugin.version>
-      <frontend-maven-plugin.version>2.0.0</frontend-maven-plugin.version>
+      <frontend-maven-plugin.version>2.0.1</frontend-maven-plugin.version>
       <git-commit-id-plugin.version>4.9.10</git-commit-id-plugin.version>
       <groovy-maven-plugin.version>2.1.1</groovy-maven-plugin.version>
       <jacoco-maven-plugin.version>0.8.15</jacoco-maven-plugin.version>
@@ -137,7 +137,7 @@
       <maven-surefire-report-plugin.version>3.5.6</maven-surefire-report-plugin.version>
       <properties-maven-plugin.version>1.3.0</properties-maven-plugin.version>
       <spotless-maven-plugin-eclipse.version>4.37</spotless-maven-plugin-eclipse.version>
-      <spotless-maven-plugin.version>3.6.0</spotless-maven-plugin.version>
+      <spotless-maven-plugin.version>3.7.0</spotless-maven-plugin.version>
       <versions-maven-plugin.version>2.21.0</versions-maven-plugin.version>
 
       <!-- General settings -->
@@ -960,10 +960,9 @@
                <!-- central-publishing-maven-plugin.version: Don't update beyond
                0.8.0 because central-bundle functionality is broken -->
                <!-- maven-plugin-dependencies.version: Can't update to 3.9.5: sisu-inject usage in maven-plugin-testing-hardness is broken -->
-               <!-- aas4j: Don't update to 2.x until https://github.com/eclipse-aas4j/aas4j/issues/448 is fixed -->
                <!-- jena.version: Breaking changes that need to be addressed
                     separately -->
-               <excludeProperties>central-publishing-maven-plugin.version,maven-plugin-dependencies.version,aas4j.version,jena.version</excludeProperties>
+               <excludeProperties>central-publishing-maven-plugin.version,maven-plugin-dependencies.version,jena.version</excludeProperties>
             </configuration>
          </plugin>
       </plugins>
