@@ -72,7 +72,7 @@
       <jackson.version>3.2.0</jackson.version>
       <jakarta-el.version>5.0.0-M1</jakarta-el.version>
       <jakarta.version>6.1.0</jakarta.version>
-      <jena.version>5.6.0</jena.version>
+      <jena.version>6.1.0</jena.version>
       <jansi.version>2.4.3</jansi.version>
       <javaparser.version>3.28.2</javaparser.version>
       <jqwik.version>1.10.1</jqwik.version>
@@ -960,9 +960,7 @@
                <!-- central-publishing-maven-plugin.version: Don't update beyond
                0.8.0 because central-bundle functionality is broken -->
                <!-- maven-plugin-dependencies.version: Can't update to 3.9.5: sisu-inject usage in maven-plugin-testing-hardness is broken -->
-               <!-- jena.version: Breaking changes that need to be addressed
-                    separately -->
-               <excludeProperties>central-publishing-maven-plugin.version,maven-plugin-dependencies.version,jena.version</excludeProperties>
+               <excludeProperties>central-publishing-maven-plugin.version,maven-plugin-dependencies.version</excludeProperties>
             </configuration>
          </plugin>
       </plugins>
