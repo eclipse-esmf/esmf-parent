@@ -46,6 +46,7 @@
 
    <properties>
       <aas4j.version>2.0.2</aas4j.version>
+      <appdirs.version>1.5.0</appdirs.version>
       <aspect-meta-model.version>2.2.0</aspect-meta-model.version>
       <assertj-core.version>3.27.7</assertj-core.version>
       <assertj-vavr.version>0.5.1</assertj-vavr.version>
@@ -154,6 +155,11 @@
             <groupId>org.eclipse.esmf</groupId>
             <artifactId>esmf-semantic-aspect-meta-model</artifactId>
             <version>${aspect-meta-model.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>net.harawata</groupId>
+            <artifactId>appdirs</artifactId>
+            <version>${appdirs.version}</version>
          </dependency>
          <dependency>
             <groupId>org.assertj</groupId>
