@@ -156,6 +156,44 @@
    <dependencyManagement>
       <dependencies>
          <dependency>
+            <groupId>org.eclipse.digitaltwin.aas4j</groupId>
+            <artifactId>aas4j-model</artifactId>
+            <version>${aas4j.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.eclipse.digitaltwin.aas4j</groupId>
+            <artifactId>aas4j-dataformat-xml</artifactId>
+            <version>${aas4j.version}</version>
+            <exclusions>
+               <exclusion>
+                  <groupId>org.slf4j</groupId>
+                  <artifactId>slf4j-simple</artifactId>
+               </exclusion>
+            </exclusions>
+         </dependency>
+         <dependency>
+            <groupId>org.eclipse.digitaltwin.aas4j</groupId>
+            <artifactId>aas4j-dataformat-aasx</artifactId>
+            <version>${aas4j.version}</version>
+            <exclusions>
+               <exclusion>
+                  <groupId>org.slf4j</groupId>
+                  <artifactId>slf4j-simple</artifactId>
+               </exclusion>
+            </exclusions>
+         </dependency>
+         <dependency>
+            <groupId>org.eclipse.digitaltwin.aas4j</groupId>
+            <artifactId>aas4j-dataformat-json</artifactId>
+            <version>${aas4j.version}</version>
+            <exclusions>
+               <exclusion>
+                  <groupId>org.slf4j</groupId>
+                  <artifactId>slf4j-simple</artifactId>
+               </exclusion>
+            </exclusions>
+         </dependency>
+         <dependency>
             <groupId>org.eclipse.esmf</groupId>
             <artifactId>esmf-semantic-aspect-meta-model</artifactId>
             <version>${aspect-meta-model.version}</version>
@@ -281,44 +319,6 @@
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-client</artifactId>
             <version>${hadoop-client.version}</version>
-         </dependency>
-         <dependency>
-            <groupId>org.eclipse.digitaltwin.aas4j</groupId>
-            <artifactId>aas4j-model</artifactId>
-            <version>${aas4j.version}</version>
-         </dependency>
-         <dependency>
-            <groupId>org.eclipse.digitaltwin.aas4j</groupId>
-            <artifactId>aas4j-dataformat-xml</artifactId>
-            <version>${aas4j.version}</version>
-            <exclusions>
-               <exclusion>
-                  <groupId>org.slf4j</groupId>
-                  <artifactId>slf4j-simple</artifactId>
-               </exclusion>
-            </exclusions>
-         </dependency>
-         <dependency>
-            <groupId>org.eclipse.digitaltwin.aas4j</groupId>
-            <artifactId>aas4j-dataformat-aasx</artifactId>
-            <version>${aas4j.version}</version>
-            <exclusions>
-               <exclusion>
-                  <groupId>org.slf4j</groupId>
-                  <artifactId>slf4j-simple</artifactId>
-               </exclusion>
-            </exclusions>
-         </dependency>
-         <dependency>
-            <groupId>org.eclipse.digitaltwin.aas4j</groupId>
-            <artifactId>aas4j-dataformat-json</artifactId>
-            <version>${aas4j.version}</version>
-            <exclusions>
-               <exclusion>
-                  <groupId>org.slf4j</groupId>
-                  <artifactId>slf4j-simple</artifactId>
-               </exclusion>
-            </exclusions>
          </dependency>
          <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
