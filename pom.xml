@@ -50,60 +50,60 @@
       <aspect-meta-model.version>2.2.0</aspect-meta-model.version>
       <assertj-core.version>3.27.7</assertj-core.version>
       <assertj-vavr.version>0.5.1</assertj-vavr.version>
-      <avro.version>1.12.1</avro.version>
+      <avro.version>1.12.2</avro.version>
       <batik.version>1.19</batik.version>
-      <checkstyle.version>13.10.0</checkstyle.version>
-      <classgraph.version>4.8.190</classgraph.version>
-      <commonmark.version>0.30.0</commonmark.version>
-      <commons-codec.version>1.22.1</commons-codec.version>
+      <checkstyle.version>14.3.0</checkstyle.version>
+      <classgraph.version>4.8.198</classgraph.version>
+      <commonmark.version>0.30.1</commonmark.version>
+      <commons-codec.version>1.23.0</commons-codec.version>
       <commons-compress.version>1.28.0</commons-compress.version>
       <commons-exec.version>1.6.0</commons-exec.version>
       <commons-io.version>2.22.0</commons-io.version>
-      <commons-lang3.version>3.20.0</commons-lang3.version>
+      <commons-lang3.version>3.21.0</commons-lang3.version>
       <commons-text.version>1.15.0</commons-text.version>
       <easy-random.version>5.0.0</easy-random.version>
-      <graalvm.version>25.2.4</graalvm.version>
-      <graph-support.version>1.5.3</graph-support.version>
-      <guava.version>33.6.0-jre</guava.version>
+      <graalvm.version>25.4.4.1.1</graalvm.version>
+      <graph-support.version>1.5.5</graph-support.version>
+      <guava.version>33.7.2-jre</guava.version>
       <guice.version>7.0.0</guice.version>
       <hadoop-client.version>3.5.0</hadoop-client.version>
       <hibernate-validator.version>8.0.4.Final</hibernate-validator.version>
-      <hibernate-validator.version>9.1.3.Final</hibernate-validator.version>
+      <hibernate-validator.version>9.1.4.Final</hibernate-validator.version>
       <jackson-annotations.version>2.22</jackson-annotations.version>
-      <jackson-databind.version>3.2.1</jackson-databind.version>
-      <jackson-databind2.version>2.22.1</jackson-databind2.version>
-      <jackson-dataformat-xml.version>3.2.1</jackson-dataformat-xml.version>
-      <jackson-dataformat-yaml.version>3.2.1</jackson-dataformat-yaml.version>
-      <jackson.version>3.2.1</jackson.version>
+      <jackson-databind.version>3.2.3</jackson-databind.version>
+      <jackson-databind2.version>2.22.3</jackson-databind2.version>
+      <jackson-dataformat-xml.version>3.2.3</jackson-dataformat-xml.version>
+      <jackson-dataformat-yaml.version>3.2.3</jackson-dataformat-yaml.version>
+      <jackson.version>3.2.3</jackson.version>
       <jakarta-el.version>5.0.0-M1</jakarta-el.version>
       <jakarta.version>6.1.0</jakarta.version>
       <jakarta.xml.bind-api.version>4.0.5</jakarta.xml.bind-api.version>
       <jansi.version>2.4.3</jansi.version>
       <javaparser.version>3.28.2</javaparser.version>
       <jena.version>6.2.0</jena.version>
-      <jqwik.version>1.10.1</jqwik.version>
+      <jqwik.version>1.10.2</jqwik.version>
       <json-path.version>3.0.0</json-path.version>
       <json-schema-validator.version>2.2.14</json-schema-validator.version>
       <jspecify.version>1.0.1</jspecify.version>
       <junit-jupiter.version>6.1.3</junit-jupiter.version>
       <log4j.version>2.26.1</log4j.version>
-      <logback.version>1.6.2</logback.version>
-      <lombok.version>1.18.46</lombok.version>
+      <logback.version>1.6.5</logback.version>
+      <lombok.version>1.18.48</lombok.version>
       <lsp4j.version>1.0.0</lsp4j.version>
-      <maven-plugin-annotations.version>3.15.2</maven-plugin-annotations.version>
+      <maven-plugin-annotations.version>3.16.0</maven-plugin-annotations.version>
       <maven-plugin-dependencies.version>3.8.1</maven-plugin-dependencies.version>
-      <mockito.version>5.23.0</mockito.version>
+      <mockito.version>5.24.0</mockito.version>
       <mojo-executor.version>2.4.1</mojo-executor.version>
-      <parquet-avro.version>1.18.0</parquet-avro.version>
-      <parquet-hadoop.version>1.18.0</parquet-hadoop.version>
+      <parquet-avro.version>1.18.1</parquet-avro.version>
+      <parquet-hadoop.version>1.18.1</parquet-hadoop.version>
       <picocli.version>4.7.7</picocli.version>
       <poi.version>5.5.1</poi.version>
       <record-builder.version>53</record-builder.version>
       <rgxgen.version>3.1</rgxgen.version>
       <roaster.version>2.31.1.Final</roaster.version>
-      <slf4j.version>2.0.18</slf4j.version>
-      <swagger-parser.version>2.1.46</swagger-parser.version>
-      <tika.version>3.3.2</tika.version>
+      <slf4j.version>2.0.20</slf4j.version>
+      <swagger-parser.version>2.1.48</swagger-parser.version>
+      <tika.version>4.1.0</tika.version>
       <validation-api.version>3.1.1</validation-api.version>
       <vavr.version>1.0.1</vavr.version>
       <velocity.version>2.4.1</velocity.version>
@@ -111,10 +111,10 @@
       <xz.version>1.12</xz.version>
 
       <!-- Versions of plugins -->
-      <build-helper-maven-plugin.version>3.6.1</build-helper-maven-plugin.version>
+      <build-helper-maven-plugin.version>3.6.2</build-helper-maven-plugin.version>
       <central-publishing-maven-plugin.version>0.8.0</central-publishing-maven-plugin.version>
       <download-maven-plugin.version>1.13.0</download-maven-plugin.version>
-      <exec-maven-plugin.version>3.6.3</exec-maven-plugin.version>
+      <exec-maven-plugin.version>3.6.4</exec-maven-plugin.version>
       <flatten-maven-plugin.version>1.8.0</flatten-maven-plugin.version>
       <frontend-maven-plugin.version>2.0.2</frontend-maven-plugin.version>
       <git-commit-id-plugin.version>4.9.10</git-commit-id-plugin.version>
@@ -122,28 +122,28 @@
       <jacoco-maven-plugin.version>0.8.15</jacoco-maven-plugin.version>
       <maven-checkstyle-plugin.version>3.6.0</maven-checkstyle-plugin.version>
       <maven-clean-plugin.version>3.5.0</maven-clean-plugin.version>
-      <maven-compiler-plugin.version>3.15.0</maven-compiler-plugin.version>
+      <maven-compiler-plugin.version>3.16.0</maven-compiler-plugin.version>
       <maven-dependency-plugin.version>3.11.0</maven-dependency-plugin.version>
-      <maven-deploy-plugin.version>3.1.4</maven-deploy-plugin.version>
+      <maven-deploy-plugin.version>3.2.0</maven-deploy-plugin.version>
       <maven-enforcer-plugin.version>3.6.3</maven-enforcer-plugin.version>
-      <maven-failsafe-plugin.version>3.5.6</maven-failsafe-plugin.version>
+      <maven-failsafe-plugin.version>3.6.0</maven-failsafe-plugin.version>
       <maven-gpg-plugin.version>3.2.8</maven-gpg-plugin.version>
-      <maven-install-plugin.version>3.1.4</maven-install-plugin.version>
+      <maven-install-plugin.version>3.2.0</maven-install-plugin.version>
       <maven-jar-plugin.version>3.5.1</maven-jar-plugin.version>
       <maven-javadoc-plugin.version>3.12.0</maven-javadoc-plugin.version>
-      <maven-plugin-plugin.version>3.15.2</maven-plugin-plugin.version>
+      <maven-plugin-plugin.version>3.16.0</maven-plugin-plugin.version>
       <maven-plugin-testing-harness.version>3.5.1</maven-plugin-testing-harness.version>
       <maven-resources-plugin.version>3.5.0</maven-resources-plugin.version>
       <maven-scm-plugin.version>2.2.1</maven-scm-plugin.version>
       <maven-shade-plugin.version>3.6.2</maven-shade-plugin.version>
       <maven-source-plugin.version>3.4.0</maven-source-plugin.version>
       <maven-surefire-junit5-tree-reporter.version>1.5.1</maven-surefire-junit5-tree-reporter.version>
-      <maven-surefire-plugin.version>3.5.6</maven-surefire-plugin.version>
-      <maven-surefire-report-plugin.version>3.5.6</maven-surefire-report-plugin.version>
-      <properties-maven-plugin.version>1.3.0</properties-maven-plugin.version>
+      <maven-surefire-plugin.version>3.6.0</maven-surefire-plugin.version>
+      <maven-surefire-report-plugin.version>3.6.0</maven-surefire-report-plugin.version>
+      <properties-maven-plugin.version>1.3.1</properties-maven-plugin.version>
       <spotless-maven-plugin-eclipse.version>4.40</spotless-maven-plugin-eclipse.version>
-      <spotless-maven-plugin.version>3.9.0</spotless-maven-plugin.version>
-      <versions-maven-plugin.version>2.21.0</versions-maven-plugin.version>
+      <spotless-maven-plugin.version>3.10.4</spotless-maven-plugin.version>
+      <versions-maven-plugin.version>2.23.0</versions-maven-plugin.version>
 
       <!-- General settings -->
       <testreports.surefire>surefire-report</testreports.surefire>
