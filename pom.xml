@@ -98,6 +98,7 @@
       <parquet-hadoop.version>1.18.1</parquet-hadoop.version>
       <picocli.version>4.7.7</picocli.version>
       <poi.version>5.5.1</poi.version>
+      <quick-perf.version>1.1.0</quick-perf.version>
       <record-builder.version>53</record-builder.version>
       <rgxgen.version>3.1</rgxgen.version>
       <roaster.version>2.31.1.Final</roaster.version>
@@ -525,6 +526,11 @@
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
             <version>${poi.version}</version>
+         </dependency>
+         <dependency>
+            <groupId>org.quickperf</groupId>
+            <artifactId>quick-perf-junit5</artifactId>
+            <version>${quick-perf.version}</version>
          </dependency>
          <dependency>
             <groupId>io.soabase.record-builder</groupId>
